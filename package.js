@@ -13,7 +13,7 @@ Package.on_use(function (api) {
 
     // Make sure any storage adapters are loaded first
     api.use([
-      'ground:localstorage'
+      'ground:localstorage@0.0.0'
     ], 'client', { weak: true });
   } else {
 
