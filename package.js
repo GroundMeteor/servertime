@@ -1,7 +1,8 @@
 Package.describe({
   name: "ground:servertime",
   version: "0.0.0",
-  summary: "Adds server time on the client"
+  summary: "Adds server time on the client",
+  git: "https://github.com/GroundMeteor/servertime.git"  
 });
 
 Package.on_use(function (api) {
