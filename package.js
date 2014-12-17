@@ -14,7 +14,7 @@ Package.onUse(function (api) {
 
     // Make sure any storage adapters are loaded first
     api.use([
-      'ground:localstorage@0.1.6'
+      'ground:localstorage@0.1.7'
     ], 'client', { weak: true });
   } else {
 
