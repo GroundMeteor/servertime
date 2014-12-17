@@ -5,16 +5,16 @@ Package.describe({
   git: "https://github.com/GroundMeteor/servertime.git"  
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
 
   if (api.versionsFrom) {
-    api.versionsFrom('METEOR@0.9.1');
+    api.versionsFrom('1.0');
 
     api.use('ground:store@0.0.0');
 
     // Make sure any storage adapters are loaded first
     api.use([
-      'ground:localstorage@0.0.0'
+      'ground:localstorage@0.1.5'
     ], 'client', { weak: true });
   } else {
 
@@ -29,11 +29,11 @@ Package.on_use(function (api) {
 
   api.export('ServerTime');
 
-  api.add_files('client.js', 'client');
-  api.add_files('server.js', 'server');
+  api.addFiles('client.js', 'client');
+  api.addFiles('server.js', 'server');
 });
 
-Package.on_test(function (api) {
+Package.onTest(function (api) {
   if (api.versionsFrom) {
     api.use('ground:servertime', ['client', 'server']);
   } else {
@@ -42,7 +42,7 @@ Package.on_test(function (api) {
   api.use('test-helpers', 'client');
   api.use(['tinytest', 'underscore', 'ejson']);
 
-  api.add_files('client.tests.js', 'client');
-  api.add_files('server.tests.js', 'server');
+  api.addFiles('client.tests.js', 'client');
+  api.addFiles('server.tests.js', 'server');
 
 });
