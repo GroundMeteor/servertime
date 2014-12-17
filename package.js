@@ -10,7 +10,7 @@ Package.onUse(function (api) {
   if (api.versionsFrom) {
     api.versionsFrom('1.0');
 
-    api.use('ground:store@0.0.0');
+    api.use('ground:store@0.1.0');
 
     // Make sure any storage adapters are loaded first
     api.use([
