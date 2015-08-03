@@ -12,7 +12,7 @@ ServerTime.now = function() {
 // client time - this includes lag and timezone
 
 // Use the ground store to handle storage for us
-var _storage = Store.create({
+var _storage = new LocalForage({
   name: 'ServerTime',
   version: 1.0
 })
