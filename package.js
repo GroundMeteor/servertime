@@ -1,18 +1,18 @@
 Package.describe({
   name: "ground:servertime",
-  version: "0.0.3",
+  version: "0.0.4-rc.1",
   summary: "Adds server time on the client",
   git: "https://github.com/GroundMeteor/servertime.git"
 });
 
 Package.onUse(function (api) {
 
-  api.versionsFrom('1.0');
+  api.versionsFrom('METEOR@1.2-rc.4');
 
   // Make sure any storage adapters are loaded first
   api.use([
     //'ground:localstorage@0.1.7'
-    'raix:localforage@1.2.4'
+    'raix:localforage@1.2.4-rc.1'
   ], 'client');
 
   api.export('ServerTime');
@@ -22,11 +22,7 @@ Package.onUse(function (api) {
 });
 
 Package.onTest(function (api) {
-  if (api.versionsFrom) {
-    api.use('ground:servertime', ['client', 'server']);
-  } else {
-    api.use('ground-servertime', ['client', 'server']);
-  }
+  api.use('ground:servertime', ['client', 'server']);
   api.use('test-helpers', 'client');
   api.use(['tinytest', 'underscore', 'ejson']);
 
