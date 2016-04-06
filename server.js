@@ -13,3 +13,5 @@ Meteor.methods({
 ServerTime.now = function() {
   return Date.now();
 };
+
+export default { ServerTime };

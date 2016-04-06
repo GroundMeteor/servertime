@@ -1,12 +1,5 @@
 {
-   // JSHint Meteor Configuration File
-   // Match the Meteor Style Guide
-   //
-   // By @raix with contributions from @aldeed and @awatson1978
-   // Source https://github.com/raix/Meteor-jshintrc
-   //
-   // See http://jshint.com/docs/ for more details
-
+	"esversion": 6,
 	"maxerr": 50,
 	"bitwise": true,
 	"camelcase": true,
@@ -24,13 +17,13 @@
 	"quotmark": false,
 	"undef": true,
 	"unused": true,
-	"strict": true,
+	"strict": false,
 	"trailing": true,
 	"maxparams": false,
 	"maxdepth": false,
 	"maxstatements": false,
 	"maxcomplexity": false,
-	"maxlen": 80,
+	"maxlen": 140,
 	"asi": false,
 	"boss": false,
 	"debug": false,
@@ -73,25 +66,31 @@
 	"passfail": false,
 	"white": false,
 	"predef": [
-		"Meteor",
-		"Accounts",
-		"Session",
-		"Template",
-		"check",
-		"Match",
-		"Deps",
-		"EJSON",
-		"Email",
-		"Package",
-		"Tinytest",
-		"Npm",
+		"App",
 		"Assets",
-		"Packages",
-		"process",
+		"Cordova",
+		"Deps",
+		"DomUtils",
+		"EJSON",
+		"Kernel",
 		"LocalCollection",
-		"_",
+		"Meteor",
+		"MiniMax",
+		"Minimongo",
+		"Npm",
+		"OneTimeout",
+		"OrderedDict",
+		"Package",
 		"Random",
-		"HTTP",
-		"_methodHTTP"
-	]
+		"SeededRandom",
+		"ServerTime",
+		"Store",
+		"Tinytest",
+		"Tracker",
+		"_",
+		"ReactiveVar"
+	],
+	"globals": {
+		"ServerTime": true
+	}
 }
